@@ -238,6 +238,8 @@
             display: flex;
             gap: 10px;
         }
+
+
         .btn0 {
             background-color: #b4b4b4;
             color: #121212;
@@ -266,13 +268,13 @@
             background-color: #8aa5d7;
             color: #121212;
             border: none;
+            width: 100%;
             padding: 10px 20px;
             font-size: 0.9rem;
             font-weight: 500;
             border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
-            white-space: nowrap;
         }
         .btn0:hover {
             background-color: #f8f9d0;
@@ -292,7 +294,38 @@
                 max-width: 250px;
                 flex-direction: column;
             }
-        
+
+        .topics {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.2s;
+            background-color: #f9f9f900;
+        }
+        .topics.show {
+            max-height: 1000px; /* Adjust this value based on your content */
+            padding: 10px;
+            transition: max-height 0.5s;
+        }
+        .topics ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .vocab {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.2s;
+            background-color: #f9f9f900;
+        }
+        .vocab.show {
+            max-height: 2000px; /* Adjust this value based on your content */
+            padding: 10px;
+            transition: max-height 0.5s;
+        }
+        .vocab ul {
+            margin: 0;
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -333,7 +366,92 @@
             <div class="btn-group">
                 <button class="btn0">Topics Covered</button>
                 <button class="btn">Vocabulary List</button>
-                <button class="btn2">Vocabulary Flashcards</button>
+                <a href="https://biphmusic.github.io/flashcards/" target="_blank">
+                    <button class="btn2">Vocabulary Flashcards</button>
+                </a>
+            </div>
+            <div class="topics">
+                <ul>
+                    <li>1.1 - Pitch and Pitch Notation</li>
+                    <li>1.2 - Rhythmic Values</li>
+                    <li>1.3 - Half Steps and Whole Steps</li>
+                    <li>1.4 - Major Scales and Scale Degrees</li>
+                    <li>1.5 - Major Keys and Key Signatures</li>
+                    <li>1.6 - Simple and Compound Beat Division</li>
+                    <li>1.7 - Meter and Time Signature</li>
+                    <li>1.8 - Rhythmic Patterns</li>
+                    <li>1.9 - Tempo</li>
+                    <li>1.10 - Dynamics and Articulation</li>
+                </ul>
+            </div>
+            <div class="vocab">
+                <ul>
+                    <li>Accidental</li>
+                    <li>Sharp</li>
+                    <li>Flat</li>
+                    <li>Double Sharp</li>
+                    <li>Double Flat</li>
+                    <li>Natural</li>
+                    <li>Enharmonic</li>
+                    <li>Key</li>
+                    <li>Key Signature</li>
+                    <li>Solfege</li>
+                    <li>Scale</li>
+                    <li>Major Scale</li>
+                    <li>Natural Minor Scale</li>
+                    <li>Harmonic Minor Scale</li>
+                    <li>Melodic Minor Scale</li>
+                    <li>Relative Minor</li>
+                    <li>Parallel Minor</li>
+                    <li>Slur</li>
+                    <li>Tie</li>
+                    <li>Rhythm</li>
+                    <li>Measure</li>
+                    <li>Time Signature</li>
+                    <li>Meter</li>
+                    <li>Simple Meter</li>
+                    <li>Compound Meter</li>
+                    <li>Complex Meter</li>
+                    <li>Duple Pulse</li>
+                    <li>Triple Pulse</li>
+                    <li>Quadruple Pulse</li>
+                    <li>Downbeat</li>
+                    <li>Upbeat</li>
+                    <li>Syncopation</li>
+                    <li>Tempo</li>
+                    <li>BPM</li>
+                    <li>Ritardano</li>
+                    <li>Accelerando</li>
+                    <li>A Tempo</li>
+                    <li>Rubato</li>
+                    <li>Largo/Lento</li>
+                    <li>Adagio</li>
+                    <li>Andante</li>
+                    <li>Moderato</li>
+                    <li>Allegro</li>
+                    <li>Vivace</li>
+                    <li>Presto</li>
+                    <li>Dynamics</li>
+                    <li>Piano</li>
+                    <li>Forte</li>
+                    <li>Mezzo Piano</li>
+                    <li>Mezzo Forte</li>
+                    <li>Pianissimo</li>
+                    <li>Fortissimo</li>
+                    <li>Crescendo</li>
+                    <li>Decrescendo</li>
+                    <li>Diminuendo</li>
+                    <li>Forte Piano</li>
+                    <li>Articulation</li>
+                    <li>Staccato</li>
+                    <li>Legato</li>
+                    <li>Accent / Bell Tone</li>
+                    <li>Marcato </li>
+                    <li>Tenuto</li>
+                    <li>Sforzando</li>
+                    <li>Maestoso</li>
+                    <li>Glissando</li>
+                </ul>
             </div>
         </div>
         <div class="unit">
@@ -344,7 +462,26 @@
             <div class="btn-group">
                 <button class="btn0">Topics Covered</button>
                 <button class="btn">Vocabulary List</button>
-                <button class="btn2">Vocabulary Flashcards</button>
+                <a href="https://biphmusic.github.io/flashcards/" target="_blank">
+                    <button class="btn2">Vocabulary Flashcards</button>
+                </a>
+            </div>
+            <div class="topics">
+                <ul>
+                    <li>2.1 - Minor Scales</li>
+                    <li>2.2 - Relative Keys</li>
+                    <li>2.3 - Key Relationships</li>
+                    <li>2.4 - Other Scales</li>
+                    <li>2.5 - Interval Size and Quality</li>
+                    <li>2.6 - Interval Inversion and Compound Intervals</li>
+                    <li>2.7 - Transposing Instruments</li>
+                    <li>2.8 - Timbre</li>
+                    <li>2.9 - Melodic Features</li>
+                    <li>2.10 - Melodic Transposition</li>
+                    <li>2.11 - Texture and Texture Types</li>
+                    <li>2.12 - Texture Devices</li>
+                    <li>2.13 - Rhythmic Devices</li>
+                </ul>
             </div>
         </div>
         <div class="unit">
@@ -355,7 +492,18 @@
             <div class="btn-group">
                 <button class="btn0">Topics Covered</button>
                 <button class="btn">Vocabulary List</button>
-                <button class="btn2">Vocabulary Flashcards</button>
+                <a href="https://biphmusic.github.io/flashcards/" target="_blank">
+                    <button class="btn2">Vocabulary Flashcards</button>
+                </a>
+            </div>
+            <div class="topics">
+                <ul>
+                    <li>3.1 - Triad and Chord Qualities</li>
+                    <li>3.2 - Diatonic Chords and Roman Numerals</li>
+                    <li>3.3 - Chord Inversions and Figures</li>
+                    <li>3.4 - Seventh Chords</li>
+                    <li>3.5 - Seventh Chord Inversions and Figures</li>
+                </ul>
             </div>
         </div>
         <div class="unit">
@@ -366,7 +514,18 @@
             <div class="btn-group">
                 <button class="btn0">Topics Covered</button>
                 <button class="btn">Vocabulary List</button>
-                <button class="btn2">Vocabulary Flashcards</button>
+                <a href="https://biphmusic.github.io/flashcards/" target="_blank">
+                    <button class="btn2">Vocabulary Flashcards</button>
+                </a>
+            </div>
+            <div class="topics">
+                <ul>
+                    <li>4.1 - Soprano-Bass Counterpoint</li>
+            <li>4.2 - SATB Voice Leading</li>
+            <li>4.3 - Harmonic Progression, Functional Harmony, and Cadences</li>
+            <li>4.4 - Voice Leading with Seventh Chords</li>
+            <li>4.5 - Voice Leading with Seventh Chords in Inversions</li>
+                </ul>
             </div>
         </div>
         <div class="unit">
@@ -377,7 +536,20 @@
             <div class="btn-group">
                 <button class="btn0">Topics Covered</button>
                 <button class="btn">Vocabulary List</button>
-                <button class="btn2">Vocabulary Flashcards</button>
+                <a href="https://biphmusic.github.io/flashcards/" target="_blank">
+                    <button class="btn2">Vocabulary Flashcards</button>
+                </a>
+            </div>
+            <div class="topics">
+                <ul>
+                    <li>5.1 - Adding Predominant Function to a Melodic Phrase</li>
+            <li>5.2 - The vi (VI) Chord</li>
+            <li>5.3 - Predominant Seventh Chords</li>
+            <li>5.4 - The iii (III) Chord</li>
+            <li>5.5 - Cadences and Predominant Function</li>
+            <li>5.6 - Cadential Six-Four Chords</li>
+            <li>5.7 - Additional Six-Four Chords</li>
+                </ul>
             </div>
         </div>
         <div class="unit">
@@ -388,7 +560,20 @@
             <div class="btn-group">
                 <button class="btn0">Topics Covered</button>
                 <button class="btn">Vocabulary List</button>
-                <button class="btn2">Vocabulary Flashcards</button>
+                <a href="https://biphmusic.github.io/flashcards/" target="_blank">
+                    <button class="btn2">Vocabulary Flashcards</button>
+                </a>
+            </div>
+            <div class="topics">
+                <ul>
+                    <li>6.1 - Identifying Passing Tones and Neighbor Tones</li>
+            <li>6.2 - Writing Passing Tones and Neighbor Tones</li>
+            <li>6.3 - Identifying Anticipations, Escape Tones, Appoggiaturas, and Pedal Points</li>
+            <li>6.4 - Identifying and Writing Suspensions; Identifying Retardations</li>
+            <li>6.5 - Motive and Motivic Transformation</li>
+            <li>6.6 - Melodic Sequence</li>
+            <li>6.7 - Harmonic Sequence</li>
+                </ul>
             </div>
         </div>
         <div class="unit">
@@ -399,7 +584,17 @@
             <div class="btn-group">
                 <button class="btn0">Topics Covered</button>
                 <button class="btn">Vocabulary List</button>
-                <button class="btn2">Vocabulary Flashcards</button>
+                <a href="https://biphmusic.github.io/flashcards/" target="_blank">
+                    <button class="btn2">Vocabulary Flashcards</button>
+                </a>
+            </div>
+            <div class="topics">
+                <ul>
+                    <li>7.1 - Tonicization through Secondary Dominant Chords</li>
+            <li>7.2 - Part Writing of Secondary Dominant Chords</li>
+            <li>7.3 - Tonicization Through Secondary Leading Tone Chords</li>
+            <li>7.4 - Part Writing of Secondary Leading Tone Chords</li>
+                </ul>
             </div>
         </div>
         <div class="unit">
@@ -409,7 +604,16 @@
             <div class="btn-group">
                 <button class="btn0">Topics Covered</button>
                 <button class="btn">Vocabulary List</button>
-                <button class="btn2">Vocabulary Flashcards</button>
+                <a href="https://biphmusic.github.io/flashcards/" target="_blank">
+                    <button class="btn2">Vocabulary Flashcards</button>
+                </a>
+            </div>
+            <div class="topics">
+                <ul>
+                    <li>8.1 - Modes</li>
+                    <li>8.2 - Phrase Relationships</li>
+                    <li>8.3 - Common Formal Sections</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -419,6 +623,20 @@
     </div>
     
     <script>
+        document.querySelectorAll('.btn0').forEach(button => {
+    button.addEventListener('click', function() {
+        const topics = this.parentElement.nextElementSibling;
+        topics.classList.toggle('show');
+    });
+});
+
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const vocab = this.parentElement.parentElement.querySelector('.vocab');
+        vocab.classList.toggle('show');
+    });
+});
+
      // Hamburger menu functionality
      const menuToggle = document.querySelector('.menu-toggle');
     const menuItems = document.querySelector('.menu-items');
