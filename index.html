@@ -198,134 +198,109 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            text-align: center;
-            margin-bottom: 40px;
-            letter-spacing: 2px;
-        }
-        .unit {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #1e1e1e4a;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .unit:hover {
-            box-shadow: 0 5px 80px rgba(255, 255, 255, 0.1);
-        }
-        .unit-info {
-            flex-grow: 1;
-        }
-        .unit-info h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin: 0 0 10px 0;
-        }
-        .unit-info p {
-            font-size: 1rem;
-            margin: 0;
-            opacity: 0.7;
-        }
-        .btn-group {
-            display: flex;
-            gap: 10px;
-        }
-
-
-        .btn0 {
-            background-color: #b4b4b4;
-            color: #121212;
-            border: none;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-        .btn {
-            background-color: #ffffff;
-            color: #121212;
-            border: none;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-        .btn2 {
-            background-color: #8aa5d7;
-            color: #121212;
-            border: none;
-            width: 100%;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .btn0:hover {
-            background-color: #f8f9d0;
-            transform: scale(1.05);
-        }
-        .btn:hover {
-            background-color: #f8f9d0;
-            transform: scale(1.05);
-        }
-        .btn2:hover {
-            background-color: #f8f9d0;
-            transform: scale(1.05);
-        }
-            .btn-group {
-                margin-top: 15px;
-                width: 100%;
-                max-width: 250px;
-                flex-direction: column;
-            }
-
-        .topics {
-            max-height: 0;
-            overflow: hidden;
-            transition: 0.2s;
-            background-color: #f9f9f900;
-        }
-        .topics.show {
-            max-height: 1000px; /* Adjust this value based on your content */
-            padding: 10px;
-            transition: max-height 0.5s;
-        }
-        .topics ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        .vocab {
-            max-height: 0;
-            overflow: hidden;
-            transition: 0.2s;
-            background-color: #f9f9f900;
-        }
-        .vocab.show {
-            max-height: 2000px; /* Adjust this value based on your content */
-            padding: 10px;
-            transition: max-height 0.5s;
-        }
-        .vocab ul {
-            margin: 0;
-            padding-left: 20px;
-        }
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+.unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #1e1e1e4a;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.unit:hover {
+    box-shadow: 0 5px 80px rgba(255, 255, 255, 0.1);
+}
+.unit-info {
+    flex-grow: 1;
+    width: 100%;
+}
+.unit-info h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+.unit-info p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.7;
+}
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 250px;
+    flex-direction: column;
+}
+.btn0, .btn, .btn2 {
+    background-color: #b4b4b4;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+}
+.btn {
+    background-color: #ffffff;
+}
+.btn2 {
+    background-color: #8aa5d7;
+    width: 100%;
+}
+.btn0:hover, .btn:hover, .btn2:hover {
+    background-color: #f8f9d0;
+    transform: scale(1.05);
+}
+.btn0:active, .btn:active, .btn2:active {
+    background-color: #f8f9d0;
+    transform: scale(0.95);
+}
+.vocab, .topics {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(-20px);
+    background-color: #f9f9f900;
+    width: 100%;
+}
+.vocab.show, .topics.show {
+    max-height: 2000px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 10px 0;
+}
+.topics ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.vocab-list ul {
+    column-width: 150px;
+    column-gap: 20px;
+    list-style-position: inside;
+    padding-left: 0;
+}
+.vocab-list li {
+    break-inside: avoid;
+    margin-bottom: 5px;
+}
     </style>
 </head>
 <body>
@@ -384,7 +359,7 @@
                     <li>1.10 - Dynamics and Articulation</li>
                 </ul>
             </div>
-            <div class="vocab">
+            <div class="vocab vocab-list">
                 <ul>
                     <li>Accidental</li>
                     <li>Sharp</li>
