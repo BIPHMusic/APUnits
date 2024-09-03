@@ -598,19 +598,55 @@ h1 {
     </div>
     
     <script>
-        document.querySelectorAll('.btn0').forEach(button => {
-    button.addEventListener('click', function() {
-        const topics = this.parentElement.nextElementSibling;
-        topics.classList.toggle('show');
+document.addEventListener('DOMContentLoaded', function() {
+    function toggleSection(section, button) {
+        if (section.classList.contains('show')) {
+            section.classList.remove('show');
+            button.style.backgroundColor = '';
+        } else {
+            section.classList.add('show');
+            button.style.backgroundColor = '#f8f9d0';
+        }
+    }
+
+    document.querySelectorAll('.btn0').forEach(button => {
+        button.addEventListener('click', function() {
+            const topics = this.parentElement.nextElementSibling;
+            const vocab = this.parentElement.parentElement.querySelector('.vocab');
+            const vocabBtn = this.parentElement.querySelector('.btn');
+
+            toggleSection(topics, this);
+            if (vocab.classList.contains('show')) {
+                vocab.classList.remove('show');
+                vocabBtn.style.backgroundColor = '';
+            }
+        });
+    });
+
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const vocab = this.parentElement.parentElement.querySelector('.vocab');
+            const topics = this.parentElement.nextElementSibling;
+            const topicsBtn = this.parentElement.querySelector('.btn0');
+
+            toggleSection(vocab, this);
+            if (topics.classList.contains('show')) {
+                topics.classList.remove('show');
+                topicsBtn.style.backgroundColor = '';
+            }
+        });
+    });
+
+    // Remove button highlight on touchend for mobile devices
+    document.querySelectorAll('.btn0, .btn').forEach(btn => {
+        btn.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.backgroundColor = '';
+            }, 300);
+        });
     });
 });
 
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const vocab = this.parentElement.parentElement.querySelector('.vocab');
-        vocab.classList.toggle('show');
-    });
-});
 
      // Hamburger menu functionality
      const menuToggle = document.querySelector('.menu-toggle');
